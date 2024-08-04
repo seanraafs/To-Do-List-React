@@ -1,42 +1,152 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body,
+html {
+  background-color: #333;
+  width: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: #fff;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.wrapper {
+  width: 450px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* Menambahkan teks dan elemen lain menjadi rata tengah */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media only screen and (max-width: 800px) {
+  .wrapper {
+    width: 80%;
   }
 }
 
-.card {
-  padding: 2em;
+/** form */
+.wrapper > header {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Mengatur header agar berada di tengah */
 }
 
-.read-the-docs {
-  color: #888;
+.wrapper > header > h3 {
+  margin: 0px;
+  margin-right: 10px;
+  font-size: 25px;
+  padding: 0px;
+  display: inline;
+}
+
+.wrapper > header > span {
+  font-size: 12px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2px;
+  font-weight: bold;
+  background-color: #ffc83d;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+}
+
+.input-box > input {
+  width: 100%;
+  background-color: #555;
+  color: #fff;
+  border-radius: 100px;
+  padding: 20px 120px 20px 20px;
+  line-height: 1;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+.input-box > button {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  bottom: 3px;
+  border: 0;
+  background: #00d26a;
+  color: #fff;
+  outline: none;
+  margin: 0;
+  padding: 0 10px;
+  border-radius: 100px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/** list */
+.wrapper > ul {
+  padding: 0px;
+}
+
+.wrapper > ul > li {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  text-align: left; 
+}
+.wrapper > ul > li > .left {
+  width: 30px;
+}
+
+.wrapper > ul > li > .left > button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.wrapper > ul > li > .center {
+  width: 250px;
+  color: #030303;
+}
+
+.wrapper > ul > li > .center.strike {
+  text-decoration-line: line-through;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #00d26a;
+  color: #777;
+}
+
+.wrapper > ul > li > .right {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+  justify-content: flex-end;
+}
+
+.wrapper > ul > li > .right > span {
+  width: 30%;
+}
+
+.wrapper > ul > li > .right > span > button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.center {
+  width: 250px;
+  color: #fff;
+  display: flex;
+  justify-content: center; /* Menyelaraskan teks ke tengah secara horizontal */
+  align-items: center; /* Menyelaraskan teks ke tengah secara vertikal */
+  text-align: center; /* Memastikan teks di dalam elemen juga berada di tengah */
 }
