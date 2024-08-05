@@ -18,4 +18,10 @@ module.exports = {
       { allowConstantExport: true },
     ],
   },
+  strict: {
+    name: "example/strict",
+    rules: {
+        "no-unused-vars": "error"
+    }
+}
 }

@@ -1,15 +1,16 @@
-function Form() {
+
+function Form(props) {
   return (
     <div className="App">
       <div className="wrapper">
         <header>
-          <h3>🔰 TODOLIST </h3>
+          <h3>🔰 TODOLIST </h3> <span>{props.taskCompleted || '0'} / {props.tasks.length}</span>
         </header>
 
-        <div className="input-box">
-          <input type="text" placeholder="Add Your Task" />
-          <button type="submit">Add Task</button>
-        </div>
+        <form className="input-box">
+          <input type="text" ref={props.newTask} placeholder="Add Your Task" />
+          <button type="submit"  onClick={props.addTask}>Add Task</button>
+        </form>
       </div>
     </div>
   );

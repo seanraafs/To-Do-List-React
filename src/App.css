@@ -43,8 +43,8 @@ html {
 }
 
 .wrapper > header > span {
-  font-size: 12px;
-  color: #fff;
+  font-size: 20px;
+  color: #0a0a0a;
   border-radius: 5px;
   padding: 2px;
   font-weight: bold;
@@ -120,7 +120,7 @@ html {
 .wrapper > ul > li > .center.strike {
   text-decoration-line: line-through;
   text-decoration-thickness: 3px;
-  text-decoration-color: #00d26a;
+  text-decoration-color: #ee2f0e;
   color: #777;
 }
 
@@ -132,7 +132,7 @@ html {
 }
 
 .wrapper > ul > li > .right > span {
-  width: 30%;
+  width: 40%;
 }
 
 .wrapper > ul > li > .right > span > button {

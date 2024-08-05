@@ -1,41 +1,33 @@
-function toDoList() {
+import ToDoListButton from "./ToDoListButton";
+
+function toDoList(props) {
+  props.tasks.sort((a, b) => b.id - a.id);
   return (
     <div className="wrapper">
       <ul>
-        <li>
-          <div className="left">
-            <button>✅</button>
-          </div>
-          <div className="center">bbb</div>
-          <div className="right">
-            <span>
-              <button>👆</button>
-            </span>
-            <span>
-              <button>👇</button>
-            </span>
-            <span>
-              <button>🗑️</button>
-            </span>
-          </div>
-        </li>
-        <li>
-          <div className="left">
-            <button>◻️</button>
-          </div>
-          <div className="center">aaa</div>
-          <div className="right">
-            <span>
-              <button>👆</button>
-            </span>
-            <span>
-              <button>👇</button>
-            </span>
-            <span>
-              <button>🗑️</button>
-            </span>
-          </div>
-        </li>
+        {props.tasks.map((item) => {
+          let radioCompleted = "";
+          let classCompleted = "";
+          if (item.completed == false) {
+            radioCompleted = "◻️";
+          } else {
+            radioCompleted = "✅";
+            classCompleted = "strike";
+          }
+          return (
+            <li key={item.id}>
+              <div className="left">
+                <button onClick={() => props.setCompleted(item.id)}>
+                  {radioCompleted}
+                </button>
+              </div>
+              <div className={`center ${classCompleted}`}>{item.task}</div>
+              <div className="right">
+                <ToDoListButton id={item.id} tasks={props.tasks} move={props.move} remove={props.remove} />
+              </div>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
